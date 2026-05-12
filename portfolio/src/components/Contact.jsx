@@ -31,7 +31,7 @@ const SOCIALS = [
   },
   {
     name: "Email",
-    href: "yashgoel2030@gmail.com",
+    href: "https://mail.google.com/mail/?view=cm&fs=1&to=yashgoel2030@gmail.com",
     accent: "#3b82f6",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -259,7 +259,7 @@ export default function Contact() {
                   key={s.name}
                   href={s.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel={s.name !== "Email" ? "noopener noreferrer" : undefined}
                   whileHover={{
                     x: 4,
                     boxShadow: `0 0 24px 2px ${s.accent}28`,
