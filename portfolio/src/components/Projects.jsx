@@ -22,8 +22,8 @@ const FEATURED = {
   tech: ["React.js", "JavaScript", "HTML5", "CSS3", "Node.js", "Express.js", "MongoDB", "REST API"],
   accent: "#00f5ff",
   year: "2025",
-  live: "#",
-  github: "#",
+  live: "https://ganpati-handloom.vercel.app/",
+  github: "https://github.com/YASHGOEL-CODE/ganpati-handloom",
   showLiveDemo: true,
   image: IMAGES.ganpati,
 };
@@ -37,8 +37,8 @@ const GRID_PROJECTS = [
     tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript", "Glassmorphism UI"],
     accent: "#a855f7",
     year: "2025",
-    live: "#",
-    github: "#",
+    live: "",
+    github: "https://github.com/YASHGOEL-CODE/yash-portfolio",
     showLiveDemo: false,
     image: IMAGES.portfolio,
   },
@@ -50,8 +50,8 @@ const GRID_PROJECTS = [
     tech: ["Python", "NumPy", "Pandas", "Matplotlib", "Machine Learning", "Kaggle"],
     accent: "#3b82f6",
     year: "2025",
-    live: "#",
-    github: "#",
+    live: "",
+    github: "https://github.com/YASHGOEL-CODE/CreditWise-Loan-Prediction",
     showLiveDemo: false,
     image: IMAGES.creditwise,
   },
@@ -63,8 +63,8 @@ const GRID_PROJECTS = [
     tech: ["Python", "NumPy", "Pandas", "Matplotlib", "Clustering", "Unsupervised Learning"],
     accent: "#22d3ee",
     year: "2025",
-    live: "#",
-    github: "#",
+    live: "",
+    github: "https://github.com/YASHGOEL-CODE/SmartCart-Customer-Segmentation",
     showLiveDemo: false,
     image: IMAGES.smartcart,
   },
@@ -76,8 +76,8 @@ const GRID_PROJECTS = [
     tech: ["Python", "CNN", "Deep Learning", "Image Processing", "NumPy", "Pandas"],
     accent: "#6366f1",
     year: "2025",
-    live: "#",
-    github: "#",
+    live: "",
+    github: "https://github.com/YASHGOEL-CODE/DateFruit-Image-Classification",
     showLiveDemo: false,
     image: IMAGES.imageClass,
   },
@@ -89,8 +89,8 @@ const GRID_PROJECTS = [
     tech: ["React", "JavaScript", "Node.js", "MongoDB", "Git Concepts"],
     accent: "#8b5cf6",
     year: "2025",
-    live: "#",
-    github: "#",
+    live: "",
+    github: "https://github.com/YASHGOEL-CODE/CodePulse",
     showLiveDemo: false,
     image: IMAGES.github,
   },
@@ -260,6 +260,8 @@ function LiveButton({ href, accent }) {
   return (
     <motion.a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       whileHover={{ scale: 1.04, boxShadow: `0 0 22px 4px ${accent}44` }}
       whileTap={{ scale: 0.97 }}
       className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold text-black"
@@ -282,6 +284,8 @@ function GithubButton({ href }) {
   return (
     <motion.a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       whileHover={{ scale: 1.04, borderColor: "rgba(255,255,255,0.26)" }}
       whileTap={{ scale: 0.97 }}
       className="flex items-center gap-1.5 px-5 py-2.5 rounded-xl text-xs font-semibold text-white"
