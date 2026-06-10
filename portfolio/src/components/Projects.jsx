@@ -24,6 +24,7 @@ const FEATURED = {
   year: "2025",
   live: "#",
   github: "#",
+  showLiveDemo: true,
   image: IMAGES.ganpati,
 };
 
@@ -38,6 +39,7 @@ const GRID_PROJECTS = [
     year: "2025",
     live: "#",
     github: "#",
+    showLiveDemo: false,
     image: IMAGES.portfolio,
   },
   {
@@ -50,6 +52,7 @@ const GRID_PROJECTS = [
     year: "2025",
     live: "#",
     github: "#",
+    showLiveDemo: false,
     image: IMAGES.creditwise,
   },
   {
@@ -62,6 +65,7 @@ const GRID_PROJECTS = [
     year: "2025",
     live: "#",
     github: "#",
+    showLiveDemo: false,
     image: IMAGES.smartcart,
   },
   {
@@ -74,6 +78,7 @@ const GRID_PROJECTS = [
     year: "2025",
     live: "#",
     github: "#",
+    showLiveDemo: false,
     image: IMAGES.imageClass,
   },
   {
@@ -86,6 +91,7 @@ const GRID_PROJECTS = [
     year: "2025",
     live: "#",
     github: "#",
+    showLiveDemo: false,
     image: IMAGES.github,
   },
 ];
@@ -140,7 +146,7 @@ function ProjectImage({ src, alt, accent, icon, featured = false, hovered = fals
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            objectPosition: "center center",
+            objectPosition: "center top",
             display: "block",
             transition: "transform 0.7s ease",
           }}
@@ -425,7 +431,9 @@ function FeaturedCard({ project, inView }) {
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-3">
-            <LiveButton href={project.live} accent={project.accent} />
+            {project.showLiveDemo && (
+              <LiveButton href={project.live} accent={project.accent} />
+            )}
             <GithubButton href={project.github} />
           </div>
         </div>
@@ -554,7 +562,9 @@ function GridCard({ project, index, iconGlyph }) {
 
           {/* Buttons */}
           <div className="flex gap-2 mt-auto">
-            <LiveButton href={project.live} accent={project.accent} />
+            {project.showLiveDemo && (
+              <LiveButton href={project.live} accent={project.accent} />
+            )}
             <GithubButton href={project.github} />
           </div>
         </div>
