@@ -27,8 +27,9 @@ const ROLES = [
 const TECH = ["C/C++", "Python", "NumPy", "Pandas", "Matplotlib"];
 
 const STATS = [
-  { val: "6+", label: "Projects" },
-  { val: "ML Explorer", label: "Experience" },
+  { val: "40+", label: "Projects" },
+  { val: "5yr", label: "Experience" },
+  { val: "12+", label: "ML Models" },
 ];
 
 // ── Stagger variants ──────────────────────────────────────────────────────────
@@ -407,7 +408,9 @@ export default function Hero() {
                   fontWeight: 300,
                 }}
               >
-                Exploring AI/ML while creating modern web experiences, interactive interfaces, and smart digital products.
+                Crafting interfaces at the intersection of design precision and
+                engineering depth. From pixel-perfect UIs to production ML pipelines —
+                I ship work that scales and endures.
               </motion.p>
 
               {/* CTA buttons */}
@@ -441,6 +444,33 @@ export default function Hero() {
                   }}
                 >
                   Contact Me
+                </motion.a>
+                {/* Resume button — outlined cyan, opens PDF in new tab */}
+                <motion.a
+                  href="/resume/Yash_Goel_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="View resume PDF (opens in new tab)"
+                  whileHover={{
+                    scale: 1.04,
+                    borderColor: "rgba(0,245,255,0.65)",
+                    boxShadow: "0 0 22px 4px rgba(0,245,255,0.18)",
+                  }}
+                  whileTap={{ scale: 0.97 }}
+                  className="flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold tracking-wide transition-all duration-200"
+                  style={{
+                    fontFamily: "'DM Sans', sans-serif",
+                    background: "rgba(0,245,255,0.05)",
+                    border: "1px solid rgba(0,245,255,0.28)",
+                    color: "#00f5ff",
+                  }}
+                >
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M6.5 1.5v7M3.5 6.5l3 3 3-3M1.5 11h10"
+                      stroke="currentColor" strokeWidth="1.5"
+                      strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  Resume
                 </motion.a>
               </motion.div>
 

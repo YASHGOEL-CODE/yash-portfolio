@@ -159,28 +159,61 @@ export default function Navbar() {
         })}
       </ul>
 
-      {/* ── Desktop CTA ──────────────────────────────────────────────────── */}
-      <motion.button
-        onClick={() => scrollTo("contact")}
-        whileHover={{
-          scale: 1.03,
-          boxShadow: "0 0 18px 3px rgba(0,245,255,0.22)",
-        }}
-        whileTap={{ scale: 0.96 }}
-        className="hidden md:flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-semibold text-black"
-        style={{
-          background: "linear-gradient(135deg, #00f5ff 0%, #3b82f6 100%)",
-          letterSpacing: "0.02em",
-          fontFamily: "'DM Sans', sans-serif",
-        }}
-      >
-        Hire Me
-        {/* Tiny arrow */}
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-          <path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" strokeWidth="1.4"
-            strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </motion.button>
+      {/* ── Desktop CTA row ───────────────────────────────────────────────── */}
+      <div className="hidden md:flex items-center gap-2">
+        {/* Resume — outlined */}
+        <motion.a
+          href="/resume/Yash_Goel_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Yash Goel's resume (opens in new tab)"
+          whileHover={{
+            scale: 1.03,
+            borderColor: "rgba(0,245,255,0.55)",
+            boxShadow: "0 0 14px 2px rgba(0,245,255,0.15)",
+          }}
+          whileTap={{ scale: 0.96 }}
+          className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-semibold"
+          style={{
+            background: "transparent",
+            border: "1px solid rgba(0,245,255,0.3)",
+            color: "#00f5ff",
+            letterSpacing: "0.02em",
+            fontFamily: "'DM Sans', sans-serif",
+            transition: "border-color 0.2s, box-shadow 0.2s",
+          }}
+        >
+          {/* Download icon */}
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor"
+              strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          Resume
+        </motion.a>
+
+        {/* Hire Me — filled */}
+        <motion.button
+          onClick={() => scrollTo("contact")}
+          whileHover={{
+            scale: 1.03,
+            boxShadow: "0 0 18px 3px rgba(0,245,255,0.22)",
+          }}
+          whileTap={{ scale: 0.96 }}
+          aria-label="Hire Me — scroll to contact section"
+          className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-[13px] font-semibold text-black"
+          style={{
+            background: "linear-gradient(135deg, #00f5ff 0%, #3b82f6 100%)",
+            letterSpacing: "0.02em",
+            fontFamily: "'DM Sans', sans-serif",
+          }}
+        >
+          Hire Me
+          <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
+            <path d="M2 5.5h7M6 2.5l3 3-3 3" stroke="currentColor" strokeWidth="1.4"
+              strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </motion.button>
+      </div>
 
       {/* ── Hamburger (mobile) ────────────────────────────────────────────── */}
       <button
@@ -264,7 +297,31 @@ export default function Navbar() {
                 style={{ height: "1px", background: "rgba(255,255,255,0.06)" }}
               />
 
-              {/* Mobile CTA */}
+              {/* Mobile Resume */}
+              <motion.a
+                href="/resume/Yash_Goel_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View resume (opens in new tab)"
+                onClick={() => setOpen(false)}
+                whileTap={{ scale: 0.97 }}
+                className="mx-1 py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center gap-1.5"
+                style={{
+                  background: "transparent",
+                  border: "1px solid rgba(0,245,255,0.28)",
+                  color: "#00f5ff",
+                  fontFamily: "'DM Sans', sans-serif",
+                  textDecoration: "none",
+                }}
+              >
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <path d="M6 1v7M3 6l3 3 3-3M1 10h10" stroke="currentColor"
+                    strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                Resume
+              </motion.a>
+
+              {/* Mobile Hire Me */}
               <motion.button
                 onClick={() => scrollTo("contact")}
                 whileTap={{ scale: 0.97 }}
