@@ -24,7 +24,7 @@ const ROLES = [
   "ML Engineer",
 ];
 
-const TECH = ["C/C++", "Python", "NumPy", "Pandas", "Matplotlib"];
+const TECH = ["C/C++", "Python", "Machine Learning", "Deep Learning",];
 
 const STATS = [
   { val: "6+", label: "Projects" },
