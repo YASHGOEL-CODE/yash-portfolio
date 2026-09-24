@@ -27,9 +27,8 @@ const ROLES = [
 const TECH = ["C/C++", "Python", "NumPy", "Pandas", "Matplotlib"];
 
 const STATS = [
-  { val: "40+", label: "Projects" },
-  { val: "5yr", label: "Experience" },
-  { val: "12+", label: "ML Models" },
+  { val: "6+", label: "Projects" },
+  { val: "3+", label: "ML Models" },
 ];
 
 // ── Stagger variants ──────────────────────────────────────────────────────────
@@ -447,7 +446,7 @@ export default function Hero() {
                 </motion.a>
                 {/* Resume button — outlined cyan, opens PDF in new tab */}
                 <motion.a
-                  href="/resume/Yash_Goel_Resume.pdf"
+                  href="/resume/Yash_Goel_Resume.pdf.pdf (1).pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="View resume PDF (opens in new tab)"

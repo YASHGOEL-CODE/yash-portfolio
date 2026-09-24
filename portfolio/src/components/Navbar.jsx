@@ -163,7 +163,7 @@ export default function Navbar() {
       <div className="hidden md:flex items-center gap-2">
         {/* Resume — outlined */}
         <motion.a
-          href="/resume/Yash_Goel_Resume.pdf"
+          href="/resume/Yash_Goel_Resume.pdf.pdf (1).pdf"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="View Yash Goel's resume (opens in new tab)"

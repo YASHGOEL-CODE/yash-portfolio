@@ -18,7 +18,7 @@ const CARDS = [
     icon: "⬡",
     title: "AI / ML Exploration",
     desc: "Exploring machine learning workflows, model experimentation, and intelligent systems using Python-based tools.",
-    pills: ["Python", "NumPy", "Pandas", "Matplotlib"],
+    pills: ["NumPy", "Pandas", "Matplotlib", "Machine Learning", "Deep Learning"],
     accent: "#a855f7",
   },
   {
